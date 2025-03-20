@@ -1,0 +1,37 @@
+.difficulty-selector {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.difficulty-selector p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.difficulty-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
+  background-color: #ddd;
+}
+
+.difficulty-button:hover {
+  background-color: #bbb;
+}
+
+.difficulty-button.active {
+  background-color: #56b3a2;
+  color: white;
+  transform: scale(1.1);
+}

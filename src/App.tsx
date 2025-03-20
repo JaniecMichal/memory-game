@@ -1,35 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {
+  Board,
+  Button,
+  DifficultySelector,
+  GameHistory,
+  Timer,
+} from "./components";
+import { useGameStore } from "./store/gameStore";
 
-function App() {
-  const [count, setCount] = useState(0)
+import "./styles/global.scss";
+
+const App = () => {
+  const startGame = useGameStore((state) => state.startGame);
+  const resetGame = useGameStore((state) => state.resetGame);
+  const attempts = useGameStore((state) => state.attempts);
+  const isGameActive = useGameStore((state) => state.isGameActive);
+  const difficulty = useGameStore((state) => state.difficulty);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="app">
+      <div className="app_game-container">
+        <h1 className="app__title">Memory Game</h1>
 
-export default App
+        <DifficultySelector />
+
+        <div className="app__game-actions">
+          <Button
+            onClick={startGame}
+            disabled={!difficulty && !isGameActive}
+            variant="primary"
+          >
+            Start Game
+          </Button>
+          <Button
+            onClick={resetGame}
+            disabled={!isGameActive}
+            variant="secondary"
+          >
+            Reset Game
+          </Button>
+        </div>
+
+        {isGameActive && <Timer />}
+        <p>🔢 Attempts: {attempts}</p>
+        <Board />
+      </div>
+
+      <GameHistory />
+    </div>
+  );
+};
+
+export default App;
