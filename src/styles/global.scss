@@ -50,6 +50,10 @@ body {
 }
 
 @media (max-width: 1080px) {
+  body {
+    align-items: flex-start;
+  }
+
   .app {
     align-items: center;
   }
