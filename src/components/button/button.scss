@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .button {
   padding: 10px 16px;
   border: none;
@@ -5,29 +7,29 @@
   cursor: pointer;
   font-size: 16px;
   transition: background 0.3s, transform 0.2s;
-  background-color: #212121;
+  background-color: $color-dark;
 }
 
 .button.primary {
-  background-color: #4caf50;
-  color: white;
+  background-color: $color-highlight;
+  color: $color-white;
 }
 
 .button.primary:hover {
-  background-color: #45a049;
+  background-color: $color-highlight-hover;
 }
 
 .button.secondary {
-  background-color: #f44336;
-  color: white;
+  background-color: $color-danger;
+  color: $color-white;
 }
 
 .button.secondary:hover {
-  background-color: #d32f2f;
+  background-color: $color-danger-hover;
 }
 
 .button:disabled {
-  background-color: #ccc;
+  background-color: $color-disabled;
   cursor: not-allowed;
   transform: none;
 }

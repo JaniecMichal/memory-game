@@ -1,0 +1,28 @@
+$color-background: linear-gradient(to right, #74ebd5, #acb6e5);
+$color-white: #ffffff;
+$color-gray-light: #dddddd;
+$color-gray-dark: #444;
+$color-border: #ccc;
+$color-success: #b0ffb0;
+$color-success-border: #66cc66;
+$color-highlight: #4caf50;
+$color-highlight-hover: #45a049;
+$color-disabled: #ccc;
+
+$font-main: "Arial", sans-serif;
+
+$tile-size: 70px;
+$tile-size-md: 55px;
+$tile-size-sm: 35px;
+
+$icon-size: 50px;
+$icon-size-md: 35px;
+$icon-size-sm: 22px;
+
+$shadow-light: 0 4px 10px rgba(0, 0, 0, 0.2);
+$shadow-tile: 0 2px 5px rgba(0, 0, 0, 0.1);
+$shadow-matched: 0 0 10px rgba(102, 204, 102, 0.5);
+
+$color-dark: #212121;
+$color-danger: #f44336;
+$color-danger-hover: #d32f2f;
