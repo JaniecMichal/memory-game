@@ -32,8 +32,8 @@ export const Board = () => {
 
 const NonActiveBoard = () => (
   <div className="board-placeholder">
-    <div className="board hard">
-      {Array.from({ length: 32 }).map((_, index) => (
+    <div className="board hard--placeholder">
+      {Array.from({ length: 72 }).map((_, index) => (
         <div key={index} className="placeholder-tile"></div>
       ))}
     </div>

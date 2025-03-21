@@ -18,6 +18,7 @@ body {
   color: #444;
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .app__title {
@@ -32,6 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .app_game-container {
@@ -43,4 +45,26 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1080px) {
+  .app {
+    align-items: center;
+  }
+
+  .app_game-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .app__title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app__game-actions {
+    flex-direction: column;
+  }
 }

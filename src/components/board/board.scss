@@ -1,8 +1,9 @@
-.board-placeholder {
-  position: relative;
+.board-placeholder,
+.board-container {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  position: relative;
 }
 
 .board {
@@ -18,16 +19,20 @@
 }
 
 .board.medium {
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .board.hard {
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+
+  &--placeholder {
+    grid-template-columns: repeat(12, 1fr);
+  }
 }
 
 .placeholder-tile {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   background: linear-gradient(to top left, #bbb, #999);
   border-radius: 5px;
 }
@@ -55,4 +60,31 @@
 .highlighted-text {
   color: #4caf50;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .board.hard {
+    &--placeholder {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .board {
+    gap: 3px;
+  }
+
+  .board.hard {
+    &--placeholder {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  .placeholder-tile {
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(to top left, #bbb, #999);
+    border-radius: 2px;
+  }
 }

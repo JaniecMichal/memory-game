@@ -1,6 +1,5 @@
 .game-history {
   width: 250px;
-  height: 100%;
   background: #f8f9fa;
   padding: 15px;
   border-radius: 10px;
@@ -16,7 +15,7 @@
 .game-history__list {
   list-style: none;
   padding: 0;
-  height: 540px;
+  max-height: 540px;
 }
 
 .game-history__list-item {
@@ -32,7 +31,6 @@
 }
 
 .game-history__details {
-  display: block;
   margin: 3px 0;
 }
 
@@ -61,4 +59,18 @@
 .pagination__button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+@media (max-width: 1080px) {
+  .game-history {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination {
+    flex-direction: column;
+    gap: 8px;
+  }
 }
