@@ -1,11 +1,11 @@
-@import "../../styles/variables.scss";
+@use "../../styles/variables" as vars;
 
 .game-history {
   width: 250px;
-  background: $color-gray-light;
+  background: vars.$color-gray-light;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: $shadow-light;
+  box-shadow: vars.$shadow-light;
 }
 
 .game-history__heading {
@@ -21,11 +21,11 @@
 }
 
 .game-history__list-item {
-  background: $color-white;
+  background: vars.$color-white;
   margin: 5px 0;
   padding: 8px;
   border-radius: 5px;
-  box-shadow: $shadow-tile;
+  box-shadow: vars.$shadow-tile;
   font-size: 14px;
   display: flex;
   flex-direction: column;
@@ -49,41 +49,41 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
-  background-color: $color-highlight;
-  color: $color-white;
+  background-color: vars.$color-highlight;
+  color: vars.$color-white;
   transition: background 0.3s;
 }
 
 .pagination__button:hover {
-  background-color: $color-highlight-hover;
+  background-color: vars.$color-highlight-hover;
 }
 
 .pagination__button:disabled {
-  background-color: $color-disabled;
+  background-color: vars.$color-disabled;
   cursor: not-allowed;
 }
 
 @media (max-width: 768px) {
   .tile-wrapper {
-    width: $tile-size-md;
-    height: $tile-size-md;
+    width: vars.$tile-size-md;
+    height: vars.$tile-size-md;
   }
 
   .tile-back svg {
-    width: $icon-size-md;
-    height: $icon-size-md;
+    width: vars.$icon-size-md;
+    height: vars.$icon-size-md;
   }
 }
 
 @media (max-width: 480px) {
   .tile-wrapper {
-    width: $tile-size-sm;
-    height: $tile-size-sm;
+    width: vars.$tile-size-sm;
+    height: vars.$tile-size-sm;
   }
 
   .tile-back svg {
-    width: $icon-size-sm;
-    height: $icon-size-sm;
+    width: vars.$icon-size-sm;
+    height: vars.$icon-size-sm;
   }
 
   .pagination {

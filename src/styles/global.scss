@@ -1,6 +1,8 @@
+@use "./variables" as vars;
+
 body {
-  font-family: "Arial", sans-serif;
-  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  font-family: vars.$font-main;
+  background: vars.$color-background;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +15,7 @@ body {
   background: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: vars.$shadow-light;
   max-width: 1420px;
   color: #444;
   display: flex;
@@ -23,7 +25,7 @@ body {
 
 .app__title {
   font-size: 32px;
-  color: #444;
+  color: vars.$color-gray-dark;
   font-weight: 700;
 }
 
@@ -44,7 +46,7 @@ body {
   background: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: vars.$shadow-light;
 }
 
 @media (max-width: 1080px) {

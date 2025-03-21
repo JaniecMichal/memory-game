@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@use "../../styles/variables" as vars;
 
 .board-placeholder,
 .board-container {
@@ -11,7 +11,7 @@
 .board {
   display: grid;
   gap: 5px;
-  background: $color-gray-light;
+  background: vars.$color-gray-light;
   padding: 10px;
   border-radius: 10px;
 }
@@ -53,26 +53,26 @@
 }
 
 .overlay__text {
-  color: $color-white;
+  color: vars.$color-white;
   font-size: 18px;
   text-align: center;
   font-weight: bold;
 }
 
 .highlighted-text {
-  color: $color-highlight;
+  color: vars.$color-highlight;
   font-weight: bold;
 }
 
 @media (max-width: 768px) {
   .tile-wrapper {
-    width: $tile-size-md;
-    height: $tile-size-md;
+    width: vars.$tile-size-md;
+    height: vars.$tile-size-md;
   }
 
   .tile-back svg {
-    width: $icon-size-md;
-    height: $icon-size-md;
+    width: vars.$icon-size-md;
+    height: vars.$icon-size-md;
   }
 
   .board.hard {
@@ -84,13 +84,13 @@
 
 @media (max-width: 480px) {
   .tile-wrapper {
-    width: $tile-size-sm;
-    height: $tile-size-sm;
+    width: vars.$tile-size-sm;
+    height: vars.$tile-size-sm;
   }
 
   .tile-back svg {
-    width: $icon-size-sm;
-    height: $icon-size-sm;
+    width: vars.$icon-size-sm;
+    height: vars.$icon-size-sm;
   }
 
   .pagination {

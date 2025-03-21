@@ -1,8 +1,8 @@
-@import "../../styles/variables.scss";
+@use "../../styles/variables" as vars;
 
 .tile-wrapper {
-  width: $tile-size;
-  height: $tile-size;
+  width: vars.$tile-size;
+  height: vars.$tile-size;
   perspective: 800px;
   cursor: pointer;
 }
@@ -35,26 +35,26 @@
 
 .tile-front {
   background: linear-gradient(to bottom right, #999, #666);
-  border: 2px solid $color-border;
+  border: 2px solid vars.$color-border;
   z-index: 2;
 }
 
 .tile-back {
-  background: linear-gradient(to top left, $color-white, $color-gray-light);
+  background: linear-gradient(to top left, vars.$color-white, vars.$color-gray-light);
   border: 2px solid #ddd;
   transform: rotateY(180deg);
 }
 
 .tile-back svg {
-  width: $icon-size;
-  height: $icon-size;
-  color: $color-gray-dark;
+  width: vars.$icon-size;
+  height: vars.$icon-size;
+  color: vars.$color-gray-dark;
 }
 
 .tile-wrapper.matched .tile-back {
-  background: $color-success !important;
-  border: 2px solid $color-success-border;
-  box-shadow: $shadow-matched;
+  background: vars.$color-success !important;
+  border: 2px solid vars.$color-success-border;
+  box-shadow: vars.$shadow-matched;
 }
 
 .tile-wrapper.matched .tile-inner {
@@ -75,24 +75,24 @@
 
 @media (max-width: 768px) {
   .tile-wrapper {
-    width: $tile-size-md;
-    height: $tile-size-md;
+    width: vars.$tile-size-md;
+    height: vars.$tile-size-md;
   }
 
   .tile-back svg {
-    width: $icon-size-md;
-    height: $icon-size-md;
+    width: vars.$icon-size-md;
+    height: vars.$icon-size-md;
   }
 }
 
 @media (max-width: 480px) {
   .tile-wrapper {
-    width: $tile-size-sm;
-    height: $tile-size-sm;
+    width: vars.$tile-size-sm;
+    height: vars.$tile-size-sm;
   }
 
   .tile-back svg {
-    width: $icon-size-sm;
-    height: $icon-size-sm;
+    width: vars.$icon-size-sm;
+    height: vars.$icon-size-sm;
   }
 }

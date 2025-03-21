@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@use "../../styles/variables" as vars;
 
 .button {
   padding: 10px 16px;
@@ -7,29 +7,29 @@
   cursor: pointer;
   font-size: 16px;
   transition: background 0.3s, transform 0.2s;
-  background-color: $color-dark;
+  background-color: vars.$color-dark;
 }
 
 .button.primary {
-  background-color: $color-highlight;
-  color: $color-white;
+  background-color: vars.$color-highlight;
+  color: vars.$color-white;
 }
 
 .button.primary:hover {
-  background-color: $color-highlight-hover;
+  background-color: vars.$color-highlight-hover;
 }
 
 .button.secondary {
-  background-color: $color-danger;
-  color: $color-white;
+  background-color: vars.$color-danger;
+  color: vars.$color-white;
 }
 
 .button.secondary:hover {
-  background-color: $color-danger-hover;
+  background-color: vars.$color-danger-hover;
 }
 
 .button:disabled {
-  background-color: $color-disabled;
+  background-color: vars.$color-disabled;
   cursor: not-allowed;
   transform: none;
 }
