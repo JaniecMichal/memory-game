@@ -1,3 +1,6 @@
+import { useMemo } from "react";
+import { formatTime } from "../../helpers/utils";
+
 type HistoryItem = {
   date: string;
   duration: number;
@@ -11,10 +14,11 @@ export const HistoryItem = ({
   attempts,
   difficulty,
 }: HistoryItem) => {
+  const formattedDuration = useMemo(() => formatTime(duration), [duration]);
   return (
     <li className="game-history__list-item">
       <span className="game-history__details">📅 {date}</span>
-      <span className="game-history__details">⏳ {duration}s</span>
+      <span className="game-history__details">⏳ {formattedDuration}</span>
       <span className="game-history__details">🎯 {attempts} attempts</span>
       <span className="game-history__details">
         🏆 {difficulty.toUpperCase()}

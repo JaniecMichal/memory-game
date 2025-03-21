@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+
 import { useGameStore } from "../../store/gameStore";
+import { formatTime } from "../../helpers/utils";
 
 import "./timer.scss";
 
@@ -24,5 +26,10 @@ export const Timer = () => {
     };
   }, [isGameActive, startTime]);
 
-  return <div className="timer">⏳ Time: {elapsedTime} sec</div>;
+  const elapsedTimeFormatted = useMemo(
+    () => formatTime(elapsedTime),
+    [elapsedTime]
+  );
+
+  return <div className="timer">⏳ Time: {elapsedTimeFormatted}</div>;
 };
